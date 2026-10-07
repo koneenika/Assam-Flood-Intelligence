@@ -1,0 +1,58 @@
+[
+  {
+    "District": "Jorhat",
+    "Gauge_Station": "Neamatighat",
+    "River": "Brahmaputra",
+    "Danger_Level_m": 85.04,
+    "HFL_m": 87.37,
+    "HFL_Date": "11-07-1991"
+  },
+  {
+    "District": "Sonitpur",
+    "Gauge_Station": "Tezpur",
+    "River": "Brahmaputra",
+    "Danger_Level_m": 65.23,
+    "HFL_m": 66.59,
+    "HFL_Date": "27-08-1988"
+  },
+  {
+    "District": "Sonitpur_Jia_Bharali",
+    "Gauge_Station": "NT Road Xing",
+    "River": "Jia Bharali",
+    "Danger_Level_m": 77.0,
+    "HFL_m": 78.5,
+    "HFL_Date": "26-07-2007"
+  },
+  {
+    "District": "Nagaon",
+    "Gauge_Station": "Kampur",
+    "River": "Kopili",
+    "Danger_Level_m": 60.5,
+    "HFL_m": 61.86,
+    "HFL_Date": "1973"
+  },
+  {
+    "District": "Golaghat",
+    "Gauge_Station": "Golaghat",
+    "River": "Dhansiri (South)",
+    "Danger_Level_m": 89.5,
+    "HFL_m": 91.3,
+    "HFL_Date": "11-10-1986"
+  },
+  {
+    "District": "Sivasagar",
+    "Gauge_Station": "Sivasagar",
+    "River": "Dikhow",
+    "Danger_Level_m": 92.4,
+    "HFL_m": 95.62,
+    "HFL_Date": "1974"
+  },
+  {
+    "District": "Sivasagar_Desang",
+    "Gauge_Station": "Nanglamoraghat",
+    "River": "Desang",
+    "Danger_Level_m": 94.46,
+    "HFL_m": 96.49,
+    "HFL_Date": "06-09-1998"
+  }
+]

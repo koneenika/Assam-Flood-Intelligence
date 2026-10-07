@@ -1,0 +1,101 @@
+[
+  {
+    "district": "Biswanath",
+    "west": 92.90340735752727,
+    "south": 26.57674751220446,
+    "east": 93.78950555378277,
+    "north": 26.994464119320035,
+    "width": 3288,
+    "height": 1550,
+    "flood_pixels": 246308,
+    "crs": "EPSG:4326"
+  },
+  {
+    "district": "Charaideo",
+    "west": 94.79040844334874,
+    "south": 26.91280725999357,
+    "east": 95.37224725287295,
+    "north": 27.227307440963816,
+    "width": 2159,
+    "height": 1167,
+    "flood_pixels": 20170,
+    "crs": "EPSG:4326"
+  },
+  {
+    "district": "Darrang",
+    "west": 91.74404165184262,
+    "south": 26.198377114533315,
+    "east": 92.38085735675494,
+    "north": 26.670531627866534,
+    "width": 2363,
+    "height": 1752,
+    "flood_pixels": 312034,
+    "crs": "EPSG:4326"
+  },
+  {
+    "district": "Golaghat",
+    "west": 93.28662865773266,
+    "south": 25.808687944282266,
+    "east": 94.17811674569288,
+    "north": 26.79261267497838,
+    "width": 3308,
+    "height": 3651,
+    "flood_pixels": 99903,
+    "crs": "EPSG:4326"
+  },
+  {
+    "district": "Hojai",
+    "west": 92.7020949023561,
+    "south": 25.71813776364302,
+    "east": 93.24809093204394,
+    "north": 26.208078919601807,
+    "width": 2026,
+    "height": 1818,
+    "flood_pixels": 43372,
+    "crs": "EPSG:4326"
+  },
+  {
+    "district": "Jorhat",
+    "west": 93.97114490423174,
+    "south": 26.347407620168745,
+    "east": 94.60337920119505,
+    "north": 26.952961953193714,
+    "width": 2346,
+    "height": 2247,
+    "flood_pixels": 83042,
+    "crs": "EPSG:4326"
+  },
+  {
+    "district": "Nagaon",
+    "west": 92.39514056977245,
+    "south": 25.961491374110995,
+    "east": 93.31815952420526,
+    "north": 26.700445526827714,
+    "width": 3425,
+    "height": 2742,
+    "flood_pixels": 256973,
+    "crs": "EPSG:4326"
+  },
+  {
+    "district": "Sivasagar",
+    "west": 94.39505988680774,
+    "south": 26.711764299407623,
+    "east": 94.94186440025129,
+    "north": 27.275546971721035,
+    "width": 2029,
+    "height": 2092,
+    "flood_pixels": 126334,
+    "crs": "EPSG:4326"
+  },
+  {
+    "district": "Sonitpur",
+    "west": 92.32318551551448,
+    "south": 26.495629642048467,
+    "east": 92.9831777547571,
+    "north": 27.03192386666782,
+    "width": 2449,
+    "height": 1990,
+    "flood_pixels": 164669,
+    "crs": "EPSG:4326"
+  }
+]

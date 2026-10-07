@@ -1,0 +1,4 @@
+district,error
+Karbi Anglong,"Image.reduceRegion: Too many pixels in the region. Found 116237354, but maxPixels allows only 100000000.
+Ensure that you are not aggregating at a higher resolution than you intended; that is a frequent cause of this error. If not, then you may set the 'maxPixels' argument to a limit suitable for your computation; set 'bestEffort' to true to aggregate at whatever scale results in 'maxPixels' total pixels; or both."
+Lakhimpur,"GeometryConstructors.Rectangle: Inputs must be Number, List, or Geometry. Found type 'List<List<List<Float>>>'."

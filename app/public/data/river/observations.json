@@ -1,0 +1,32 @@
+[
+  {
+    "Date": "2026-07-20",
+    "Time": "18:00",
+    "Gauge_Station": "Neamatighat",
+    "River": "Brahmaputra",
+    "District": "Jorhat",
+    "Water_Level_m": 85.63,
+    "Trend": "Rising",
+    "Source": "CWC-reported observation",
+    "Danger_Level_m": 85.04,
+    "HFL_m": 87.37,
+    "Difference_From_Danger_m": 0.59,
+    "Difference_From_HFL_m": -1.74,
+    "Flood_Status": "Above Danger Level"
+  },
+  {
+    "Date": "2026-07-24",
+    "Time": "09:00",
+    "Gauge_Station": "Sivasagar",
+    "River": "Dikhow",
+    "District": "Sivasagar",
+    "Water_Level_m": 94.26,
+    "Trend": "Falling",
+    "Source": "CWC-reported observation",
+    "Danger_Level_m": 92.4,
+    "HFL_m": 95.62,
+    "Difference_From_Danger_m": 1.86,
+    "Difference_From_HFL_m": -1.36,
+    "Flood_Status": "Above Danger Level"
+  }
+]

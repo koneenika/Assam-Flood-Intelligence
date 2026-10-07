@@ -1,0 +1,573 @@
+{
+  "overview": {
+    "rainfall": {
+      "scope": {
+        "description": "Assam-wide rainfall during the flood period",
+        "area": "Entire Assam"
+      },
+      "flood_period": {
+        "start": "2026-07-18",
+        "end": "2026-08-11",
+        "days": 25
+      },
+      "summary": {
+        "accumulated_rainfall_mm": 279.513,
+        "maximum_daily_rainfall_mm": 34.89,
+        "rainfall_days": 25
+      },
+      "daily": [
+        {
+          "date": "2026-07-18",
+          "rainfall_mm": 9.113
+        },
+        {
+          "date": "2026-07-19",
+          "rainfall_mm": 24.828
+        },
+        {
+          "date": "2026-07-20",
+          "rainfall_mm": 7.603
+        },
+        {
+          "date": "2026-07-21",
+          "rainfall_mm": 13.603
+        },
+        {
+          "date": "2026-07-22",
+          "rainfall_mm": 12.125
+        },
+        {
+          "date": "2026-07-23",
+          "rainfall_mm": 6.475
+        },
+        {
+          "date": "2026-07-24",
+          "rainfall_mm": 2.555
+        },
+        {
+          "date": "2026-07-25",
+          "rainfall_mm": 3.339
+        },
+        {
+          "date": "2026-07-26",
+          "rainfall_mm": 4.786
+        },
+        {
+          "date": "2026-07-27",
+          "rainfall_mm": 7.718
+        },
+        {
+          "date": "2026-07-28",
+          "rainfall_mm": 16.162
+        },
+        {
+          "date": "2026-07-29",
+          "rainfall_mm": 20.203
+        },
+        {
+          "date": "2026-07-30",
+          "rainfall_mm": 15.984
+        },
+        {
+          "date": "2026-07-31",
+          "rainfall_mm": 11.31
+        },
+        {
+          "date": "2026-08-01",
+          "rainfall_mm": 9.717
+        },
+        {
+          "date": "2026-08-02",
+          "rainfall_mm": 12.591
+        },
+        {
+          "date": "2026-08-03",
+          "rainfall_mm": 15.36
+        },
+        {
+          "date": "2026-08-04",
+          "rainfall_mm": 34.89
+        },
+        {
+          "date": "2026-08-05",
+          "rainfall_mm": 8.096
+        },
+        {
+          "date": "2026-08-06",
+          "rainfall_mm": 5.914
+        },
+        {
+          "date": "2026-08-07",
+          "rainfall_mm": 10.39
+        },
+        {
+          "date": "2026-08-08",
+          "rainfall_mm": 6.794
+        },
+        {
+          "date": "2026-08-09",
+          "rainfall_mm": 8.16
+        },
+        {
+          "date": "2026-08-10",
+          "rainfall_mm": 1.106
+        },
+        {
+          "date": "2026-08-11",
+          "rainfall_mm": 10.691
+        }
+      ]
+    },
+    "landcover": {
+      "scope": {
+        "description": "Flood-affected land cover across the 9 analyzed districts",
+        "district_count": 9,
+        "districts": [
+          "Biswanath",
+          "Charaideo",
+          "Darrang",
+          "Golaghat",
+          "Hojai",
+          "Jorhat",
+          "Nagaon",
+          "Sivasagar",
+          "Sonitpur"
+        ]
+      },
+      "total_flooded_area_km2": 1029.778,
+      "landcover": [
+        {
+          "name": "Cropland",
+          "area_km2": 483.169,
+          "percentage": 46.92
+        },
+        {
+          "name": "Forest",
+          "area_km2": 36.016,
+          "percentage": 3.5
+        },
+        {
+          "name": "Other",
+          "area_km2": 510.594,
+          "percentage": 49.58
+        }
+      ]
+    }
+  },
+  "districts": [
+    {
+      "district": "Biswanath",
+      "flood": {
+        "district_area_km2": 2220.110396,
+        "flooded_area_km2": 113.251003,
+        "flooded_area_percent": 5.101143
+      },
+      "agriculture": {
+        "total_cropland_km2": 943.511719,
+        "flooded_cropland_km2": 24.43018,
+        "affected_percent": 2.589282
+      },
+      "forest": {
+        "total_forest_km2": 786.634758,
+        "flooded_forest_km2": 5.384522,
+        "affected_percent": 0.684501
+      },
+      "buildings": {
+        "total_mapped": 7923,
+        "affected": 38,
+        "affected_percent": 0.479616
+      },
+      "roads": {
+        "total_length_km": 2258.391748,
+        "affected_length_km": 1.818384,
+        "affected_percent": 0.080517
+      },
+      "rainfall": {
+        "flood_period_total_mm": 271.710454,
+        "maximum_daily_mm": 55.303473,
+        "rainfall_days": 25
+      },
+      "topography": {
+        "mean_elevation_m": 87.011896,
+        "minimum_elevation_m": 58.617855,
+        "maximum_elevation_m": 400.448395,
+        "mean_slope_degrees": 1.879548,
+        "minimum_slope_degrees": 0,
+        "maximum_slope_degrees": 46.779182
+      },
+      "flooded_area_land_cover": {
+        "cropland_percent": 21.571712,
+        "forest_percent": 4.754503,
+        "other_percent": 73.673785
+      }
+    },
+    {
+      "district": "Charaideo",
+      "flood": {
+        "district_area_km2": 1013.007587,
+        "flooded_area_km2": 16.039386,
+        "flooded_area_percent": 1.583343
+      },
+      "agriculture": {
+        "total_cropland_km2": 428.717345,
+        "flooded_cropland_km2": 14.181591,
+        "affected_percent": 3.307912
+      },
+      "forest": {
+        "total_forest_km2": 561.207772,
+        "flooded_forest_km2": 0.749393,
+        "affected_percent": 0.133532
+      },
+      "buildings": {
+        "total_mapped": 40531,
+        "affected": 47,
+        "affected_percent": 0.115961
+      },
+      "roads": {
+        "total_length_km": 2607.534194,
+        "affected_length_km": 2.478964,
+        "affected_percent": 0.095069
+      },
+      "rainfall": {
+        "flood_period_total_mm": 299.117656,
+        "maximum_daily_mm": 40.53319,
+        "rainfall_days": 25
+      },
+      "topography": {
+        "mean_elevation_m": 115.421872,
+        "minimum_elevation_m": 88.197998,
+        "maximum_elevation_m": 415.596191,
+        "mean_slope_degrees": 3.585624,
+        "minimum_slope_degrees": 0,
+        "maximum_slope_degrees": 51.543713
+      },
+      "flooded_area_land_cover": {
+        "cropland_percent": 88.417294,
+        "forest_percent": 4.672205,
+        "other_percent": 6.910501
+      }
+    },
+    {
+      "district": "Darrang",
+      "flood": {
+        "district_area_km2": 1583.396747,
+        "flooded_area_km2": 255.522637,
+        "flooded_area_percent": 16.137625
+      },
+      "agriculture": {
+        "total_cropland_km2": 794.444674,
+        "flooded_cropland_km2": 61.116529,
+        "affected_percent": 7.692987
+      },
+      "forest": {
+        "total_forest_km2": 371.26961,
+        "flooded_forest_km2": 3.057092,
+        "affected_percent": 0.823416
+      },
+      "buildings": {
+        "total_mapped": 836,
+        "affected": 496,
+        "affected_percent": 59.330144
+      },
+      "roads": {
+        "total_length_km": 3152.376175,
+        "affected_length_km": 92.882085,
+        "affected_percent": 2.946415
+      },
+      "rainfall": {
+        "flood_period_total_mm": 216.3171,
+        "maximum_daily_mm": 52.547714,
+        "rainfall_days": 25
+      },
+      "topography": {
+        "mean_elevation_m": 58.135046,
+        "minimum_elevation_m": 42.962761,
+        "maximum_elevation_m": 205.673645,
+        "mean_slope_degrees": 1.770277,
+        "minimum_slope_degrees": 0,
+        "maximum_slope_degrees": 56.640583
+      },
+      "flooded_area_land_cover": {
+        "cropland_percent": 23.918244,
+        "forest_percent": 1.196408,
+        "other_percent": 74.885348
+      }
+    },
+    {
+      "district": "Golaghat",
+      "flood": {
+        "district_area_km2": 3225.026162,
+        "flooded_area_km2": 88.968127,
+        "flooded_area_percent": 2.758679
+      },
+      "agriculture": {
+        "total_cropland_km2": 1491.040732,
+        "flooded_cropland_km2": 39.591293,
+        "affected_percent": 2.655279
+      },
+      "forest": {
+        "total_forest_km2": 1360.244992,
+        "flooded_forest_km2": 5.512987,
+        "affected_percent": 0.405294
+      },
+      "buildings": {
+        "total_mapped": 111057,
+        "affected": 99,
+        "affected_percent": 0.09
+      },
+      "roads": {
+        "total_length_km": 8585.09,
+        "affected_length_km": 14.105,
+        "affected_percent": 0.16
+      },
+      "rainfall": {
+        "flood_period_total_mm": 323.042213,
+        "maximum_daily_mm": 48.394605,
+        "rainfall_days": 25
+      },
+      "topography": {
+        "mean_elevation_m": 100.543341,
+        "minimum_elevation_m": 65.56424,
+        "maximum_elevation_m": 418.673309,
+        "mean_slope_degrees": 2.528818,
+        "minimum_slope_degrees": 0,
+        "maximum_slope_degrees": 39.68412
+      },
+      "flooded_area_land_cover": {
+        "cropland_percent": 44.500536,
+        "forest_percent": 6.196587,
+        "other_percent": 49.302877
+      }
+    },
+    {
+      "district": "Hojai",
+      "flood": {
+        "district_area_km2": 1455.754293,
+        "flooded_area_km2": 34.313448,
+        "flooded_area_percent": 2.357091
+      },
+      "agriculture": {
+        "total_cropland_km2": 715.19399,
+        "flooded_cropland_km2": 30.205445,
+        "affected_percent": 4.223392
+      },
+      "forest": {
+        "total_forest_km2": 655.940314,
+        "flooded_forest_km2": 0.900206,
+        "affected_percent": 0.137239
+      },
+      "buildings": {
+        "total_mapped": 6556,
+        "affected": 19,
+        "affected_percent": 0.29
+      },
+      "roads": {
+        "total_length_km": 2395.069,
+        "affected_length_km": 8.392,
+        "affected_percent": 0.35
+      },
+      "rainfall": {
+        "flood_period_total_mm": 264.923943,
+        "maximum_daily_mm": 55.306256,
+        "rainfall_days": 25
+      },
+      "topography": {
+        "mean_elevation_m": 124.980568,
+        "minimum_elevation_m": 55.5,
+        "maximum_elevation_m": 828.84137,
+        "mean_slope_degrees": 4.626825,
+        "minimum_slope_degrees": 0,
+        "maximum_slope_degrees": 56.00621
+      },
+      "flooded_area_land_cover": {
+        "cropland_percent": 88.028009,
+        "forest_percent": 2.623479,
+        "other_percent": 9.348512
+      }
+    },
+    {
+      "district": "Jorhat",
+      "flood": {
+        "district_area_km2": 1865.776866,
+        "flooded_area_km2": 67.655186,
+        "flooded_area_percent": 3.626113
+      },
+      "agriculture": {
+        "total_cropland_km2": 856.089081,
+        "flooded_cropland_km2": 51.958669,
+        "affected_percent": 6.069306
+      },
+      "forest": {
+        "total_forest_km2": 908.040259,
+        "flooded_forest_km2": 5.325116,
+        "affected_percent": 0.586441
+      },
+      "buildings": {
+        "total_mapped": 10623,
+        "affected": 64,
+        "affected_percent": 0.6
+      },
+      "roads": {
+        "total_length_km": 4431.611,
+        "affected_length_km": 21.284,
+        "affected_percent": 0.48
+      },
+      "rainfall": {
+        "flood_period_total_mm": 386.169768,
+        "maximum_daily_mm": 45.55685,
+        "rainfall_days": 25
+      },
+      "topography": {
+        "mean_elevation_m": 107.213976,
+        "minimum_elevation_m": 74.36084,
+        "maximum_elevation_m": 430.480438,
+        "mean_slope_degrees": 3.588438,
+        "minimum_slope_degrees": 0,
+        "maximum_slope_degrees": 58.962231
+      },
+      "flooded_area_land_cover": {
+        "cropland_percent": 76.79924,
+        "forest_percent": 7.870965,
+        "other_percent": 15.329795
+      }
+    },
+    {
+      "district": "Nagaon",
+      "flood": {
+        "district_area_km2": 2577.659495,
+        "flooded_area_km2": 211.040067,
+        "flooded_area_percent": 8.187275
+      },
+      "agriculture": {
+        "total_cropland_km2": 1309.402686,
+        "flooded_cropland_km2": 158.518749,
+        "affected_percent": 12.106188
+      },
+      "forest": {
+        "total_forest_km2": 994.246794,
+        "flooded_forest_km2": 7.560565,
+        "affected_percent": 0.760431
+      },
+      "buildings": {
+        "total_mapped": 100943,
+        "affected": 854,
+        "affected_percent": 0.85
+      },
+      "roads": {
+        "total_length_km": 5746.113,
+        "affected_length_km": 40.579,
+        "affected_percent": 0.71
+      },
+      "rainfall": {
+        "flood_period_total_mm": 304.497239,
+        "maximum_daily_mm": 42.770574,
+        "rainfall_days": 25
+      },
+      "topography": {
+        "mean_elevation_m": 72.49213,
+        "minimum_elevation_m": 48.345978,
+        "maximum_elevation_m": 747.826599,
+        "mean_slope_degrees": 3.043997,
+        "minimum_slope_degrees": 0,
+        "maximum_slope_degrees": 58.695782
+      },
+      "flooded_area_land_cover": {
+        "cropland_percent": 75.113106,
+        "forest_percent": 3.582526,
+        "other_percent": 21.304368
+      }
+    },
+    {
+      "district": "Sivasagar",
+      "flood": {
+        "district_area_km2": 1630.454931,
+        "flooded_area_km2": 103.573496,
+        "flooded_area_percent": 6.352429
+      },
+      "agriculture": {
+        "total_cropland_km2": 852.341296,
+        "flooded_cropland_km2": 80.062091,
+        "affected_percent": 9.393196
+      },
+      "forest": {
+        "total_forest_km2": 637.640823,
+        "flooded_forest_km2": 4.843551,
+        "affected_percent": 0.759605
+      },
+      "buildings": {
+        "total_mapped": 69714,
+        "affected": 413,
+        "affected_percent": 0.59
+      },
+      "roads": {
+        "total_length_km": 3306.57,
+        "affected_length_km": 34.52,
+        "affected_percent": 1.04
+      },
+      "rainfall": {
+        "flood_period_total_mm": 328.771956,
+        "maximum_daily_mm": 69.450407,
+        "rainfall_days": 25
+      },
+      "topography": {
+        "mean_elevation_m": 98.396198,
+        "minimum_elevation_m": 81.336021,
+        "maximum_elevation_m": 331.304382,
+        "mean_slope_degrees": 2.679239,
+        "minimum_slope_degrees": 0,
+        "maximum_slope_degrees": 45.542168
+      },
+      "flooded_area_land_cover": {
+        "cropland_percent": 77.299786,
+        "forest_percent": 4.676439,
+        "other_percent": 18.023775
+      }
+    },
+    {
+      "district": "Sonitpur",
+      "flood": {
+        "district_area_km2": 3005.554425,
+        "flooded_area_km2": 139.415055,
+        "flooded_area_percent": 4.63858
+      },
+      "agriculture": {
+        "total_cropland_km2": 1179.470606,
+        "flooded_cropland_km2": 23.103961,
+        "affected_percent": 1.958842
+      },
+      "forest": {
+        "total_forest_km2": 1149.235401,
+        "flooded_forest_km2": 2.682593,
+        "affected_percent": 0.233424
+      },
+      "buildings": {
+        "total_mapped": 3185,
+        "affected": 9,
+        "affected_percent": 0.28
+      },
+      "roads": {
+        "total_length_km": 4640.268,
+        "affected_length_km": 18.244,
+        "affected_percent": 0.39
+      },
+      "rainfall": {
+        "flood_period_total_mm": 238.658529,
+        "maximum_daily_mm": 36.500524,
+        "rainfall_days": 25
+      },
+      "topography": {
+        "mean_elevation_m": 92.839013,
+        "minimum_elevation_m": 53.412846,
+        "maximum_elevation_m": 483.533081,
+        "mean_slope_degrees": 2.33508,
+        "minimum_slope_degrees": 0,
+        "maximum_slope_degrees": 56.051723
+      },
+      "flooded_area_land_cover": {
+        "cropland_percent": 16.57207,
+        "forest_percent": 1.924177,
+        "other_percent": 81.503753
+      }
+    }
+  ]
+}

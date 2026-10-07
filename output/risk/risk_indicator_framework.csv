@@ -1,0 +1,9 @@
+Component,Indicator,Unit,Interpretation
+Hazard,Flooded area (%),%,Higher value indicates greater flood extent
+Hazard,Flood-period rainfall,mm,Higher rainfall indicates stronger rainfall forcing
+Hazard,Mean elevation,m,Lower terrain can have greater flood susceptibility
+Hazard,Mean slope,degrees,Lower slope can indicate poorer drainage
+Hazard,River water-level condition,m,Water level relative to danger level
+Exposure,Flood-affected cropland,%,Higher value indicates greater agricultural exposure
+Exposure,Flood-affected forest,%,Higher value indicates greater ecological exposure
+Exposure,Flood-affected buildings,%,Higher value indicates greater built-up exposure

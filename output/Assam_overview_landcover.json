@@ -1,0 +1,35 @@
+{
+    "scope": {
+        "description": "Flood-affected land cover across the 9 analyzed districts",
+        "district_count": 9,
+        "districts": [
+            "Biswanath",
+            "Charaideo",
+            "Darrang",
+            "Golaghat",
+            "Hojai",
+            "Jorhat",
+            "Nagaon",
+            "Sivasagar",
+            "Sonitpur"
+        ]
+    },
+    "total_flooded_area_km2": 1029.778,
+    "landcover": [
+        {
+            "name": "Cropland",
+            "area_km2": 483.169,
+            "percentage": 46.92
+        },
+        {
+            "name": "Forest",
+            "area_km2": 36.016,
+            "percentage": 3.5
+        },
+        {
+            "name": "Other",
+            "area_km2": 510.594,
+            "percentage": 49.58
+        }
+    ]
+}

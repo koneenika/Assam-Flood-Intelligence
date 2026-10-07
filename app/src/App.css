@@ -1,0 +1,5303 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+}
+
+
+/* =========================================================
+   PALETTE
+========================================================= */
+
+:root {
+
+  --green: #909C4C;
+  --green-dark: #6E7F35;
+  --green-text: #60752F;
+  --green-bright: #CAFFA6;
+
+  --plum: #71252B;
+  --plum-dark: #5B1E24;
+
+  --blue: #8BADD4;
+  --blue-dark: #527CAA;
+  --blue-text: #52749C;
+  --blue-bright: #59BCE5;
+
+  --mist: #F7F2E8;
+  --cream: #FFFDF8;
+
+  --line:
+    rgba(113,37,43,0.13);
+
+  --shadow:
+    0 10px 28px
+    rgba(63,45,42,0.085);
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+  background:
+    var(--green);
+
+  color:
+    var(--plum);
+}
+
+button {
+  font: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+
+  min-height:
+    84px;
+
+  padding:
+    12px 24px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(300px,1fr)
+    auto
+    minmax(150px,1fr);
+
+  align-items:
+    center;
+
+  gap:
+    22px;
+
+  background:
+    var(--blue);
+
+  border-bottom:
+    1px solid
+    rgba(113,37,43,0.1);
+
+  position:
+    sticky;
+
+  top:
+    0;
+
+  z-index:
+    100;
+
+  box-shadow:
+    0 5px 18px
+    rgba(52,65,76,0.08);
+}
+
+
+/* BRAND */
+
+.brand {
+
+  border:
+    0;
+
+  background:
+    transparent;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    11px;
+
+  padding:
+    0;
+
+  text-align:
+    left;
+
+  cursor:
+    pointer;
+}
+
+.brand-symbol {
+
+  width:
+    47px;
+
+  height:
+    47px;
+
+  border-radius:
+    15px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  background:
+    var(--plum);
+
+  color:
+    var(--mist);
+}
+
+.brand-text h1 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    30px;
+
+  line-height:
+    1;
+
+  font-weight:
+    400;
+
+  color:
+    var(--plum);
+}
+
+.brand-text p {
+
+  margin:
+    5px 0 0;
+
+  color:
+    rgba(113,37,43,0.65);
+
+  font-size:
+    12px;
+
+  font-weight:
+    650;
+}
+
+.brand-text p span {
+  margin:
+    0 5px;
+}
+
+
+/* NAV */
+
+.header-nav {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    3px;
+
+  padding:
+    5px;
+
+  background:
+    rgba(247,242,232,0.25);
+
+  border:
+    1px solid
+    rgba(113,37,43,0.08);
+
+  border-radius:
+    13px;
+}
+
+.header-link {
+
+  border:
+    0;
+
+  background:
+    transparent;
+
+  padding:
+    9px 12px;
+
+  border-radius:
+    9px;
+
+  color:
+    rgba(113,37,43,0.73);
+
+  font-size:
+    15px;
+
+  font-weight:
+    750;
+
+  cursor:
+    pointer;
+}
+
+.header-link:hover {
+
+  background:
+    rgba(247,242,232,0.32);
+
+}
+
+.header-link.active {
+
+  background:
+    var(--plum);
+
+  color:
+    var(--mist);
+}
+
+
+/* EVENT PILL */
+
+.event-pill {
+
+  justify-self:
+    end;
+
+  min-width:
+    155px;
+
+  padding:
+    9px 11px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(247,242,232,0.54);
+
+  border:
+    1px solid
+    rgba(113,37,43,0.1);
+
+  color:
+    var(--plum);
+}
+
+.event-pill span {
+
+  display:
+    block;
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+  opacity:
+    0.55;
+}
+
+.event-pill strong {
+
+  display:
+    block;
+
+  margin-top:
+    2px;
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page {
+
+  width:
+    min(
+      1480px,
+      calc(100% - 40px)
+    );
+
+  margin:
+    0 auto;
+
+  padding:
+    22px 0 35px;
+}
+
+
+/* =========================================================
+   OVERVIEW HERO
+========================================================= */
+
+.overview-hero {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(0,1.5fr)
+    minmax(300px,0.62fr);
+
+  gap:
+    16px;
+
+  margin-bottom:
+    18px;
+}
+
+.hero-copy {
+
+  min-height:
+    340px;
+
+  padding:
+    40px 38px;
+
+  border-radius:
+    24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(247,242,232,0.96),
+      rgba(247,242,232,0.83)
+    );
+
+  border:
+    1px solid
+    rgba(113,37,43,0.1);
+
+  box-shadow:
+    var(--shadow);
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+}
+
+.hero-copy::after {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    230px;
+
+  height:
+    230px;
+
+  right:
+    -90px;
+
+  bottom:
+    -100px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(139,173,212,0.27);
+}
+
+.tiny-label {
+
+  color:
+    var(--plum);
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.17em;
+}
+
+.hero-copy h2 {
+
+  margin:
+    11px 0 0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(
+      42px,
+      5.2vw,
+      70px
+    );
+
+  font-weight:
+    400;
+
+  line-height:
+    0.94;
+
+  letter-spacing:
+    -0.04em;
+
+  color:
+    var(--plum);
+}
+
+.hero-copy h2 span {
+  color:
+    var(--green-dark);
+}
+
+.hero-copy > p {
+
+  max-width:
+    665px;
+
+  margin:
+    17px 0 0;
+
+  color:
+    rgba(113,37,43,0.68);
+
+  font-size:
+    16px;
+
+  line-height:
+    1.7;
+}
+
+.hero-actions {
+
+  margin-top:
+    23px;
+
+  display:
+    flex;
+
+  gap:
+    8px;
+}
+
+.plum-button {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  padding:
+    11px 15px;
+
+  border:
+    0;
+
+  border-radius:
+    11px;
+
+  background:
+    var(--plum);
+
+  color:
+    var(--mist);
+
+  font-size:
+    15px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+}
+
+.soft-button {
+
+  padding:
+    11px 14px;
+
+  border-radius:
+    11px;
+
+  border:
+    1px solid
+    rgba(113,37,43,0.09);
+
+  background:
+    rgba(139,173,212,0.35);
+
+  color:
+    var(--plum);
+
+  font-size:
+    9px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+}
+
+.hero-note {
+
+  margin-top:
+    22px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  color:
+    rgba(113,37,43,0.59);
+
+  font-size:
+    10px;
+
+  font-weight:
+    650;
+}
+
+
+/* =========================================================
+   EVENT SNAPSHOT
+========================================================= */
+
+.hero-aside {
+
+  min-height:
+    340px;
+
+  border-radius:
+    24px;
+
+  overflow:
+    hidden;
+
+  background:
+    var(--plum);
+
+  color:
+    var(--mist);
+
+  box-shadow:
+    var(--shadow);
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+}
+
+.hero-aside-top {
+
+  padding:
+    19px 19px 8px;
+}
+
+.hero-aside-top span {
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.15em;
+
+  color:
+    rgba(247,242,232,0.62);
+}
+
+.hero-aside-top strong {
+
+  display:
+    block;
+
+  margin-top:
+    6px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    30px;
+
+  line-height:
+    1;
+
+  font-weight:
+    400;
+}
+
+.hero-snapshot {
+
+  flex:
+    1;
+
+  margin:
+    6px 14px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    7px;
+}
+
+.snapshot-item {
+
+  min-height:
+    94px;
+
+  padding:
+    12px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    9px;
+
+  border-radius:
+    13px;
+
+  background:
+    rgba(139,173,212,0.19);
+}
+
+.snapshot-icon {
+
+  width:
+    40px;
+
+  height:
+    40px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  flex-shrink:
+    0;
+
+  border-radius:
+    10px;
+
+  background:
+    rgba(202,255,166,0.18);
+
+  color:
+    var(--green-bright);
+}
+
+.snapshot-copy span {
+
+  display:
+    block;
+
+  color:
+    rgba(247,242,232,0.59);
+
+  font-size:
+    15px;
+
+  line-height:
+    1.25;
+}
+
+.snapshot-copy strong {
+
+  display:
+    block;
+
+  margin-top:
+    4px;
+
+  color:
+    var(--green-bright);
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    24px;
+
+  line-height:
+    1;
+
+  font-weight:
+    400;
+}
+
+
+/* =========================================================
+   OVERVIEW MAP
+========================================================= */
+
+.overview-map-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(0,1.55fr)
+    minmax(310px,0.63fr);
+
+  gap:
+    10px;
+}
+
+.large-card,
+.soft-card,
+.district-map-card {
+
+  background:
+    var(--mist);
+
+  border:
+    5px solid
+    var(--line);
+
+  box-shadow:
+    var(--shadow);
+
+  border-radius:
+    20px;
+
+  overflow:
+    hidden;
+}
+
+.card-heading {
+
+  padding:
+    16px 17px;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  gap:
+    15px;
+}
+
+.card-heading p {
+
+  margin:
+    0 0 5px;
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.16em;
+
+  color:
+    var(--plum);
+}
+
+.card-heading h3 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    30px;
+
+  font-weight:
+    400;
+
+  line-height:
+    1;
+
+  color:
+    var(--plum);
+}
+
+.card-heading > div > span {
+
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  max-width:
+    650px;
+
+  color:
+    rgba(113,37,43,0.53);
+
+  font-size:
+    10px;
+
+  line-height:
+    1.5;
+}
+
+.map-key {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    5px;
+
+  font-size:
+    15px;
+  font-weight:
+    800;
+
+  color:
+   var(--plum);
+}
+
+.map-key > div {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+}
+
+.key-dot {
+
+  width:
+    9px;
+
+  height:
+    9px;
+
+  border-radius:
+    3px;
+}
+
+.key-dot.lower {
+  background:
+    #DDA64B;
+}
+
+.key-dot.higher {
+  background:
+    #D53A31;
+}
+
+.overview-leaflet-wrapper {
+
+  height:
+    560px;
+
+  position:
+    relative;
+}
+
+.map-container-shell {
+
+  height:
+    560px;
+
+  position:
+    relative;
+
+  background:
+    #DCE4E8;
+}
+
+.leaflet-map {
+
+  width:
+    100%;
+
+  height:
+    100%;
+}
+
+.leaflet-container {
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  background:
+    #DCE4E8;
+}
+
+.map-basemap-toggle {
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  z-index: 700;
+}
+
+.base-map-toggle {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  gap: 3px;
+  border-radius: 10px;
+  background: var(--green-bright);
+  border: 1px solid rgba(113,37,43,0.12);
+  box-shadow: 0 7px 18px rgba(0,0,0,0.15);
+}
+
+.base-map-toggle button {
+  border: 0;
+  background: transparent;
+  color: rgba(113,37,43,0.62);
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.base-map-toggle button:hover {
+  background: rgba(113,37,43,0.08);
+}
+
+.base-map-toggle button.active {
+  background: var(--plum);
+  color: var(--mist);
+}
+
+.district-basemap-toggle {
+  top: 12px;
+  right: 12px;
+}
+
+
+.leaflet-overlay-card {
+
+  position:
+    absolute;
+
+  top:
+    12px;
+
+  left:
+    12px;
+
+  z-index:
+    500;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  padding:
+    9px 11px;
+
+  border-radius:
+    10px;
+
+  background:
+    rgba(247,242,232,0.92);
+
+  box-shadow:
+    0 7px 18px
+    rgba(0,0,0,0.15);
+}
+
+.leaflet-overlay-card span {
+
+  display:
+    block;
+
+  font-size:
+    6px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.13em;
+
+  color:
+    rgba(113,37,43,0.55);
+}
+
+.leaflet-overlay-card strong {
+
+  display:
+    block;
+
+  margin-top:
+    2px;
+
+  font-size:
+    10px;
+
+  color:
+    var(--plum);
+}
+
+.overlay-pill {
+
+  padding:
+    5px 7px;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--plum);
+
+  color:
+    var(--mist);
+
+  font-size:
+    6px;
+
+  font-weight:
+    900;
+}
+
+.leaflet-scale-note {
+
+  position:
+    absolute;
+
+  right:
+    11px;
+
+  bottom:
+    9px;
+
+  z-index:
+    500;
+
+  padding:
+    5px 7px;
+
+  border-radius:
+    7px;
+
+  background:
+    rgba(247,242,232,0.82);
+
+  color:
+    rgba(113,37,43,0.55);
+
+  font-size:
+    6px;
+}
+
+.district-map-label {
+
+  padding:
+    4px 7px;
+
+  border:
+    0;
+
+  border-radius:
+    5px;
+
+  background:
+    rgba(247,242,232,0.9);
+
+  color:
+    var(--plum);
+
+  font-size:
+    9px;
+
+  font-weight:
+    800;
+}
+
+.district-map-label.analyzed {
+
+  background:
+    rgba(113,37,43,0.95);
+
+  color:
+    var(--green-bright);
+
+  font-size:
+    10px;
+}
+
+.map-loading,
+.map-error {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  z-index:
+    20;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  background:
+    rgba(247,242,232,0.9);
+
+  color:
+    var(--plum);
+
+  text-align:
+    center;
+
+  padding:
+    25px;
+}
+
+
+/* =========================================================
+   OVERVIEW SIDE
+========================================================= */
+
+.overview-side {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    10px;
+}
+
+.story-card {
+
+  padding:
+    18px;
+
+  min-height:
+    230px;
+
+  border-radius:
+    20px;
+
+  background:
+    var(--plum);
+
+  color:
+    var(--mist);
+
+  box-shadow:
+    var(--shadow);
+}
+
+.story-icon {
+
+  width:
+    39px;
+
+  height:
+    39px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  background:
+    var(--green);
+
+  color:
+    var(--plum);
+
+  border-radius:
+    12px;
+
+  margin-bottom:
+    18px;
+}
+
+.story-card > p {
+
+  margin:
+    0 0 4px;
+
+  font-size:
+    15px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.16em;
+
+  color:
+    rgba(247,242,232,0.58);
+}
+
+.story-card h3 {
+
+  margin:
+    3px 0 9px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    27px;
+
+  font-weight:
+    400;
+}
+
+.story-card > span {
+
+  display:
+    block;
+
+  color:
+    rgba(247,242,232,0.72);
+
+  font-size:
+    9px;
+
+  line-height:
+    1.65;
+}
+
+.event-card-large {
+  padding-bottom:
+    12px;
+}
+
+.small-heading {
+  padding-bottom:
+    9px;
+}
+
+.small-heading h3 {
+  font-size:
+    20px;
+}
+
+.district-chip-grid {
+
+  padding:
+    0 13px 13px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:
+    5px;
+}
+
+.district-chip-grid button {
+
+  border:
+    1px solid
+    rgba(113,37,43,0.1);
+
+  background:
+    rgba(139,173,212,0.17);
+
+  color:
+    var(--plum);
+
+  border-radius:
+    9px;
+
+  padding:
+    8px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  cursor:
+    pointer;
+
+  font-size:
+    12px;
+
+  font-weight:
+    750;
+}
+
+
+/* =========================================================
+   OVERVIEW EVENT DATA
+========================================================= */
+
+.overview-event-data {
+  margin-top: 18px;
+  scroll-margin-top: 110px;
+}
+
+.overview-event-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(260px, 3fr);
+  gap: 16px;
+}
+
+.overview-rainfall-card,
+.overview-landcover-card {
+  min-height: 430px;
+}
+
+.overview-rainfall-summary {
+  padding: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: var(--blue);
+}
+
+.overview-rainfall-summary p {
+  margin: 0 0 5px;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  color: var(--plum);
+}
+
+.overview-rainfall-summary h4 {
+  margin: 0;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 42px;
+  line-height: 0.95;
+  font-weight: 400;
+  color: var(--plum);
+}
+
+.overview-rainfall-summary h4 span {
+  margin-left: 3px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  color: var(--plum);
+}
+
+.overview-rainfall-summary > div > span {
+  display: block;
+  margin-top: 5px;
+  color: var(--plum);
+  font-size: 8px;
+}
+
+.overview-rainfall-stats {
+  min-width: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-left: 1px solid rgba(113,37,43,0.13);
+}
+
+.overview-rainfall-stats > div { padding: 4px 12px; }
+
+.overview-rainfall-stats > div + div {
+  border-left: 1px solid rgba(113,37,43,0.13);
+}
+
+.overview-rainfall-stats span {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(113,37,43,0.78);
+}
+
+.overview-rainfall-stats strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 17px;
+  color: var(--plum);
+  font-weight: 850;
+}
+
+.overview-rainfall-chart {
+  height: 315px;
+  padding: 8px 14px 14px;
+}
+
+.overview-landcover-layout {
+  height: 330px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  padding: 0 12px 12px;
+}
+
+.overview-landcover-chart {
+  height: 235px;
+  position: relative;
+}
+
+.overview-pie-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.overview-pie-center strong {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--plum);
+}
+
+.overview-pie-center span {
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--plum);
+}
+
+.overview-landcover-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.overview-landcover-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overview-landcover-item > span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.overview-landcover-item strong {
+  display: block;
+  font-size: 15px;
+  color: var(--plum);
+}
+
+.overview-landcover-item small {
+  display: block;
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--green-text);
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.district-explorer,
+.methodology-section {
+
+  margin-top:
+    18px;
+
+  scroll-margin-top:
+    110px;
+}
+
+.section-heading {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    flex-end;
+
+  margin-bottom:
+    11px;
+}
+
+.section-heading p {
+
+  margin:
+    0 0 5px;
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.16em;
+}
+
+.section-heading h3 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    27px;
+
+  font-weight:
+    400;
+
+  color:
+    var(--plum);
+}
+
+
+/* =========================================================
+   DISTRICT LIST
+========================================================= */
+
+.district-list {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    6px;
+}
+
+.district-row {
+
+  width:
+    100%;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    45px
+    minmax(150px,1.2fr)
+    repeat(3,minmax(100px,0.65fr))
+    28px;
+
+  align-items:
+    center;
+
+  gap:
+    9px;
+
+  padding:
+    11px 12px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:
+    14px;
+
+  background:
+    rgba(247,242,232,0.93);
+
+  color:
+    var(--plum);
+
+  text-align:
+    left;
+
+  cursor:
+    pointer;
+}
+
+.district-row-number {
+
+  font-size:
+    12px;
+
+  font-weight:
+    850;
+
+  color:
+    rgba(113,37,43,0.4);
+}
+
+.district-row-name strong {
+
+  display:
+    block;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    20px;
+
+  line-height:
+    1.05;
+
+  font-weight:
+    400;
+}
+
+.district-row-name span {
+
+  display:
+    block;
+
+  margin-top:
+    3px;
+
+  font-size:
+    10px;
+
+  color:
+    rgba(113,37,43,0.48);
+}
+
+.district-row-stat span {
+
+  display:
+    block;
+
+  font-size:
+    10px;
+
+  color:
+    rgba(113,37,43,0.46);
+}
+
+.district-row-stat strong {
+
+  display:
+    block;
+
+  margin-top:
+    3px;
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+}
+
+.district-row-arrow {
+
+  width:
+    28px;
+
+  height:
+    28px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  background:
+    rgba(139,173,212,0.28);
+
+  border-radius:
+    8px;
+}
+
+
+/* =========================================================
+   METHODOLOGY
+========================================================= */
+
+.methodology-card {
+
+  padding:
+    16px 18px;
+
+  border-radius:
+    18px;
+
+  background:
+    rgba(247,242,232,0.79);
+
+  border:
+    1px solid
+    var(--line);
+
+  display:
+    grid;
+
+  grid-template-columns:
+    42px
+    minmax(0,1fr)
+    auto;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+}
+
+.methodology-mark {
+
+  width:
+    38px;
+
+  height:
+    38px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  background:
+    var(--green);
+
+  border-radius:
+    11px;
+
+  color:
+    var(--plum);
+}
+
+.methodology-card p {
+
+  margin:
+    0 0 4px;
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.16em;
+
+  color:
+    var(--plum);
+}
+
+.methodology-card h3 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    21px;
+
+  font-weight:
+    400;
+}
+
+.methodology-card span {
+
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  max-width:
+    760px;
+
+  font-size:
+    12px;
+  font-weight:
+    700;
+
+  line-height:
+    1.55;
+
+  color:
+    var(--green-text);
+}
+
+.methodology-card button {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  padding:
+    9px 11px;
+
+  border:
+    0;
+
+  border-radius:
+    9px;
+
+  background:
+    var(--plum);
+
+  color:
+    var(--mist);
+
+  font-size:
+    15px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+  padding-top:
+    20px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  color:
+    var(--plum);
+
+  font-size:
+    10px;
+  font-weight:
+    800;
+}
+
+.site-footer > div:first-child {
+
+  color:
+    var(--plum);
+
+  font-weight:
+    900;
+}
+
+.footer-status {
+
+  margin-left:
+    auto;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    5px;
+}
+
+.footer-status span {
+
+  width:
+    6px;
+
+  height:
+    6px;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--green-dark);
+}
+
+
+/* =========================================================
+   DISTRICT MODE
+========================================================= */
+
+.district-mode {
+
+  min-height:
+    100vh;
+
+  background:
+    var(--plum);
+
+  color:
+    var(--green-bright);
+}
+
+.district-mode .page {
+
+  background:
+    var(--plum);
+
+  color:
+    var(--green-bright);
+}
+
+
+/* =========================================================
+   DISTRICT HERO
+========================================================= */
+
+.district-page {
+  padding-top:
+    20px;
+}
+
+.district-back-button {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  padding:
+    8px 10px;
+
+  border:
+    1px solid
+    rgba(202,255,166,0.15);
+
+  border-radius:
+    9px;
+
+  background:
+    rgba(202,255,166,0.1);
+
+  color:
+    var(--green-bright);
+
+  font-size:
+    15px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+}
+
+.district-hero-row {
+
+  margin-top:
+    20px;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    flex-end;
+
+  gap:
+    20px;
+}
+
+.district-label {
+
+  margin:
+    0 0 6px;
+
+  color:
+    rgba(202,255,166,0.74);
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.17em;
+}
+
+.district-hero-row h2 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(
+      46px,
+      5.2vw,
+      70px
+    );
+
+  line-height:
+    0.95;
+
+  font-weight:
+    400;
+
+  color:
+    var(--green-bright);
+}
+
+.district-hero-description {
+
+  max-width:
+    760px;
+
+  margin:
+    13px 0 0;
+
+  color:
+    rgba(247,242,232,0.75);
+
+  font-size:
+    11px;
+
+  line-height:
+    1.65;
+}
+
+.district-status-badge {
+
+  padding:
+    8px 11px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  border-radius:
+    999px;
+
+  border:
+    1px solid
+    rgba(202,255,166,0.18);
+
+  background:
+    rgba(202,255,166,0.1);
+
+  color:
+    var(--green-bright);
+
+  font-size:
+    12px;
+
+  font-weight:
+    850;
+}
+
+.district-status-badge span {
+
+  width:
+    6px;
+
+  height:
+    6px;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--green-bright);
+}
+
+
+/* =========================================================
+   DISTRICT METRICS
+========================================================= */
+
+.district-metric-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(6,1fr);
+
+  gap:
+    9px;
+
+  margin-top:
+    16px;
+}
+
+.district-metric {
+
+  min-height:
+    160px;
+
+  padding:
+    16px;
+
+  border-radius:
+    18px;
+
+  background:
+    var(--mist);
+
+  box-shadow:
+    var(--shadow);
+}
+
+.district-metric-icon {
+
+  width:
+    37px;
+
+  height:
+    37px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    11px;
+
+  margin-bottom:
+    14px;
+
+  background:
+    rgba(144,156,76,0.23);
+
+  color:
+    var(--green-text);
+}
+
+.district-metric > span {
+
+  display:
+    block;
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  color:
+    var(--green-text);
+}
+
+.district-metric > strong {
+
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  color:
+    var(--blue-dark);
+
+  font-size:
+    29px;
+
+  line-height:
+    1;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    -0.035em;
+}
+
+.district-metric > strong small {
+
+  margin-left:
+    4px;
+
+  font-size:
+    12px;
+
+  font-weight:
+    750;
+
+  opacity:
+    0.72;
+}
+
+.district-metric > p {
+
+  margin:
+    5px 0 0;
+
+  color:
+    var(--blue-text);
+
+  font-size:
+    12px;
+  font-weight:
+    700;
+
+  line-height:
+    1.45;
+}
+
+
+/* =========================================================
+   MAIN DISTRICT AREA
+========================================================= */
+
+.district-main-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(0,1.7fr)
+    minmax(340px,0.7fr);
+
+  gap:
+    10px;
+
+  margin-top:
+    10px;
+}
+
+
+/* =========================================================
+   DISTRICT MAP HEADER
+========================================================= */
+
+.district-map-card {
+  background:
+    var(--mist);
+}
+
+.district-map-header {
+
+  min-height:
+    100px;
+
+  padding:
+    15px 17px;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  gap:
+    15px;
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+.district-map-header p,
+.district-card-heading p,
+.district-chart-heading p {
+
+  margin:
+    0 0 5px;
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.16em;
+
+  color:
+    var(--plum);
+}
+
+.district-map-header h3,
+.district-card-heading h3,
+.district-chart-heading h3 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    25px;
+
+  line-height:
+    1;
+
+  font-weight:
+    400;
+
+  color:
+    var(--plum);
+}
+
+.district-map-header > div:first-child > span,
+.district-card-heading > div > span,
+.district-chart-heading > div > span {
+
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  color:
+    var(--green-text);
+
+  font-size:
+    12px;
+  font-weight:
+    700;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================================================
+   MAP CONTROLS + LEGEND
+========================================================= */
+
+.map-controls-and-legend {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    flex-end;
+
+  gap:
+    7px;
+}
+
+.map-layer-controls {
+
+  display:
+    flex;
+
+  gap:
+    5px;
+
+  flex-wrap:
+    wrap;
+
+  justify-content:
+    flex-end;
+}
+
+.map-layer-toggle {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    5px;
+
+  padding:
+    8px 9px;
+
+  border:
+    1px solid
+    rgba(113,37,43,0.12);
+
+  border-radius:
+    8px;
+
+  background:
+    rgba(255,253,248,0.72);
+
+  color:
+    rgba(113,37,43,0.68);
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+}
+
+.map-layer-toggle.active {
+
+  background:
+    var(--plum);
+
+  border-color:
+    var(--plum);
+
+  color:
+    var(--mist);
+}
+
+.toggle-check {
+
+  width:
+    15px;
+
+  height:
+    15px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--green-bright);
+
+  color:
+    var(--plum);
+}
+
+.toggle-off {
+
+  font-size:
+    10px;
+
+  opacity:
+    0.7;
+}
+
+
+/* =========================================================
+   SPATIAL LEGEND
+========================================================= */
+
+.spatial-legend {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  padding:
+    6px 8px;
+
+  border-radius:
+    9px;
+
+  background:
+    var(--green-bright);
+
+  box-shadow:
+    0 5px 15px
+    var(--plum-shadow);
+}
+
+.spatial-legend > div {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    5px;
+}
+
+.spatial-legend > div > span:last-child {
+
+  color:
+    var(--plum);
+
+  white-space:
+    nowrap;
+
+  font-size:
+    12px;
+
+  font-weight:
+    750;
+}
+
+.legend-marker {
+  display:
+    inline-block;
+
+  flex-shrink:
+    0;
+}
+
+.flood-marker {
+
+  width:
+    14px;
+
+  height:
+    14px;
+
+  border-radius:
+    3px;
+
+  background:
+    #D53A31;
+
+  border:
+    1px solid
+    #FF8E7E;
+}
+
+.building-marker {
+
+  width:
+    13px;
+
+  height:
+    13px;
+
+  border-radius:
+    3px;
+
+  background:
+    #71252B;
+
+  border:
+    2px solid
+    #CAFFA6;
+}
+
+.road-marker {
+
+  width:
+    21px;
+
+  height:
+    5px;
+
+  border-radius:
+    999px;
+
+  background:
+    #59BCE5;
+
+  border:
+    1px solid
+    #CAFFA6;
+}
+
+.boundary-marker {
+
+  width:
+    20px;
+
+  height:
+    0;
+
+  border-top:
+    3px solid
+    #71252B;
+  
+}
+
+
+/* =========================================================
+   DISTRICT MAP
+========================================================= */
+
+.district-map-wrapper {
+
+  height:
+    570px;
+
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  background:
+    #0D171B;
+}
+
+.district-leaflet-map {
+  height:
+    100%;
+}
+
+/*
+  Darker red flood layer.
+*/
+
+.flood-mask-layer {
+
+  filter:
+    saturate(2)
+    contrast(1.3)
+    brightness(0.70)
+    sepia(0.28)
+    hue-rotate(-10deg);
+}
+
+
+/* District label */
+
+.district-detail-label {
+
+  padding:
+    5px 8px;
+
+  border:
+    0;
+
+  border-radius:
+    6px;
+
+  background:
+    rgba(113,37,43,0.95);
+
+  color:
+    var(--green-bright);
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  box-shadow:
+    0 3px 10px
+    rgba(0,0,0,0.4);
+}
+
+
+/* Map layer status */
+
+.map-layer-status {
+
+  position:
+    absolute;
+
+  left:
+    12px;
+
+  bottom:
+    12px;
+
+  z-index:
+    700;
+
+  display:
+    flex;
+
+  gap:
+    5px;
+
+  padding:
+    6px;
+
+  border-radius:
+    10px;
+
+  background:
+    rgba(113,37,43,0.95);
+}
+
+.map-status {
+
+  min-width:
+    72px;
+
+  padding:
+    6px 7px;
+
+  border-radius:
+    7px;
+
+  background:
+    rgba(247,242,232,0.11);
+
+  color:
+    var(--mist);
+}
+
+.map-status span {
+
+  display:
+    block;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    0.11em;
+
+  font-weight:
+    900;
+
+  opacity:
+    0.55;
+}
+
+.map-status strong {
+
+  display:
+    block;
+
+  margin-top:
+    2px;
+
+  color:
+    var(--green-bright);
+
+  font-size:
+    8px;
+}
+
+
+/* =========================================================
+   MAP POPUP
+========================================================= */
+
+.map-popup strong {
+
+  display:
+    block;
+
+  margin-bottom:
+    6px;
+
+  color:
+    var(--plum);
+
+  font-size:
+    11px;
+}
+
+.map-popup span {
+
+  display:
+    block;
+
+  margin-top:
+    3px;
+
+  color:
+    rgba(113,37,43,0.68);
+
+  font-size:
+    8px;
+}
+
+.popup-action {
+
+  margin-top:
+    7px !important;
+
+  color:
+    var(--plum) !important;
+
+  font-weight:
+    800;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.spatial-loading-overlay,
+.spatial-error-overlay {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  z-index:
+    800;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  padding:
+    25px;
+
+  background:
+    rgba(12,23,27,0.91);
+
+  color:
+    var(--mist);
+
+  text-align:
+    center;
+}
+
+.spatial-loading-overlay span,
+.spatial-error-overlay span {
+
+  max-width:
+    350px;
+
+  color:
+    rgba(247,242,232,0.65);
+
+  font-size:
+    8px;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.district-side-column {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    10px;
+}
+
+
+/* =========================================================
+   INFRASTRUCTURE
+========================================================= */
+
+.district-infrastructure-card {
+
+  background:
+    var(--mist);
+
+  padding-bottom:
+    10px;
+}
+
+.district-card-heading {
+
+  padding:
+    15px 17px;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+.infrastructure-feature {
+
+  margin:
+    10px 12px;
+
+  padding:
+    14px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    11px;
+
+  border-radius:
+    13px;
+
+  background:
+    var(--cream);
+
+  border:
+    1px solid
+    rgba(113,37,43,0.08);
+}
+
+.infrastructure-icon {
+
+  width:
+    44px;
+
+  height:
+    44px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    12px;
+
+  flex-shrink:
+    0;
+}
+
+.infrastructure-icon.building {
+
+  background:
+    rgba(144,156,76,0.22);
+
+  color:
+    var(--green-text);
+}
+
+.infrastructure-icon.road {
+
+  background:
+    rgba(139,173,212,0.39);
+
+  color:
+    var(--blue-text);
+}
+
+.infrastructure-copy > span {
+
+  display:
+    block;
+
+  font-size:
+    12px;
+
+  letter-spacing:
+    0.11em;
+
+  font-weight:
+    900;
+
+  color:
+    var(--green-text);
+}
+
+.infrastructure-copy strong {
+
+  display:
+    block;
+
+  margin-top:
+    4px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    31px;
+
+  line-height:
+    0.95;
+
+  font-weight:
+    400;
+
+  color:
+    var(--blue-dark);
+}
+
+.infrastructure-copy strong em {
+
+  margin-left:
+    4px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    15px;
+
+  font-style:
+    normal;
+}
+
+.infrastructure-copy small {
+
+  display:
+    block;
+
+  margin-top:
+    4px;
+
+  font-size:
+    12px;
+  font-weight:
+    800;
+
+  color:
+    var(--green-text);
+}
+
+
+/* =========================================================
+   LAND COVER + TERRAIN
+========================================================= */
+
+.district-profile-card {
+
+  background:
+    var(--mist);
+
+  padding-bottom:
+    12px;
+}
+
+.mini-section-label {
+
+  padding:
+    12px 17px 4px;
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+  color:
+    var(--green-text);
+}
+
+.profile-pie-layout {
+
+  height:
+    180px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1.15fr
+    0.85fr;
+
+  align-items:
+    center;
+
+  padding:
+    0 12px;
+}
+
+.profile-pie-chart {
+
+  height:
+    178px;
+
+  position:
+    relative;
+}
+
+.pie-center {
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    50%;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  text-align:
+    center;
+
+  pointer-events:
+    none;
+}
+
+.pie-center strong {
+
+  display:
+    block;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    23px;
+
+  line-height:
+    1;
+
+  font-weight:
+    400;
+
+  color:
+    var(--plum);
+}
+
+.pie-center span {
+
+  display:
+    block;
+
+  margin-top:
+    2px;
+
+  font-size:
+    6px;
+
+  color:
+    rgba(113,37,43,0.5);
+}
+
+.landcover-legend {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    10px;
+}
+
+.landcover-legend-item {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+}
+
+.landcover-legend-item > span {
+
+  width:
+    10px;
+
+  height:
+    10px;
+
+  border-radius:
+    50%;
+}
+
+.landcover-legend-item strong {
+
+  display:
+    block;
+
+  font-size:
+    12px;
+
+  color:
+    var(--plum);
+}
+
+.landcover-legend-item small {
+
+  display:
+    block;
+
+  margin-top:
+    2px;
+
+  font-size:
+    15px;
+  font-weight:
+    700;
+
+  color:
+    var(--plum);
+}
+
+.profile-divider {
+
+  margin:
+    4px 17px 11px;
+
+  border-top:
+    1px solid
+    var(--line);
+}
+
+.profile-terrain {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    8px;
+
+  padding:
+    0 12px;
+}
+
+.terrain-mini {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  padding:
+    9px;
+
+  border-radius:
+    11px;
+
+  background:
+    rgba(139,173,212,0.18);
+}
+
+.terrain-mini-icon {
+
+  width:
+    40px;
+
+  height:
+    40px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    9px;
+
+  background:
+    rgba(139,173,212,0.4);
+
+  color:
+    var(--blue-dark);
+}
+
+.terrain-mini span {
+
+  display:
+    block;
+
+  font-size:
+    12px;
+
+  font-weight:
+    850;
+
+  color:
+    var(--green-text);
+}
+
+.terrain-mini strong {
+
+  display:
+    block;
+
+  margin-top:
+    3px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    25px;
+
+  line-height:
+    1;
+
+  font-weight:
+    400;
+
+  color:
+    var(--blue-dark);
+}
+
+.terrain-mini small {
+
+  display:
+    block;
+
+  margin-top:
+    3px;
+
+  font-size:
+    10px;
+  font-weight:
+    700;
+
+  line-height:
+    1.3;
+
+  color:
+    rgba(82,116,156,0.62);
+}
+
+
+/* =========================================================
+   EVENT RAINFALL
+========================================================= */
+
+.district-rainfall-section {
+
+  margin-top:
+    10px;
+
+  background:
+    var(--mist);
+
+  border-radius:
+    20px;
+
+  overflow:
+    hidden;
+
+  box-shadow:
+    var(--shadow);
+}
+
+.district-rainfall-summary {
+
+  padding:
+    17px;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  gap:
+    20px;
+
+  background:
+    var(--blue);
+}
+
+.district-rainfall-summary p {
+
+  margin:
+    0 0 5px;
+
+  font-size:
+    15px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+  color:
+    var(--plum);
+}
+
+.district-rainfall-summary h3 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    44px;
+
+  line-height:
+    0.95;
+
+  font-weight:
+    400;
+
+  color:
+    var(--plum);
+}
+
+.district-rainfall-summary h3 span {
+
+  margin-left:
+    4px;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size:
+    15px;
+  font-weight:
+    700;
+
+  color:
+    var(--plum);
+}
+
+.district-rainfall-summary > div > span {
+
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  color:
+    rgba(113,37,43,0.68);
+
+  font-size:
+    12px;
+  font-weight:
+    700;
+}
+
+.mini-detail-grid {
+
+  min-width:
+    390px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  border-left:
+    1px solid
+    rgba(113,37,43,0.13);
+}
+
+.mini-detail-grid > div {
+
+  padding:
+    4px 12px;
+}
+
+.mini-detail-grid > div + div {
+
+  border-left:
+    1px solid
+    rgba(113,37,43,0.13);
+}
+
+.mini-detail-grid span {
+
+  display:
+    block;
+
+  font-size:
+    15px;
+  font-weight:
+    700;
+
+  color:
+    var(--plum);
+}
+
+.mini-detail-grid strong {
+
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  font-size:
+    15px;
+
+  color:
+    var(--plum);
+
+  font-weight:
+    850;
+}
+
+
+/* =========================================================
+   RAINFALL GRAPH
+========================================================= */
+
+.district-chart-heading {
+
+  padding:
+    17px;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    center;
+
+  border-bottom:
+    1px solid
+    var(--line);
+}
+
+.rainfall-chart-body {
+
+  height:
+    365px;
+
+  padding:
+    7px 16px 14px;
+}
+
+/* =========================================================
+   WHY IT FLOODED
+========================================================= */
+
+.why-flooded-section {
+
+  margin-top:
+    12px;
+
+  padding:
+    20px;
+
+  border-radius:
+    20px;
+
+  background:
+    var(--green-bright);
+
+  border:
+    1px solid
+    rgba(202,255,166,0.35);
+
+  box-shadow:
+    var(--shadow);
+
+}
+
+
+.why-flooded-heading {
+
+  margin-bottom:
+    17px;
+
+}
+
+
+.why-flooded-heading p {
+
+  margin:
+    0 0 5px;
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.16em;
+
+  color:
+    var(--plum);
+
+}
+
+
+.why-flooded-heading h3 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    31px;
+
+  line-height:
+    1;
+
+  font-weight:
+    400;
+
+  color:
+    var(--plum);
+
+}
+
+
+.why-flooded-heading span {
+
+  display:
+    block;
+
+  max-width:
+    850px;
+
+  margin-top:
+    7px;
+
+  color:
+    rgba(113,37,43,0.70);
+
+  font-size:
+    12px;
+
+  font-weight:
+    650;
+
+  line-height:
+    1.6;
+
+}
+
+
+/* =========================================================
+   THREE REASONS — SIDE BY SIDE
+========================================================= */
+
+.why-flooded-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap:
+    12px;
+
+}
+
+
+.why-flooded-card {
+
+  position:
+    relative;
+
+  min-width:
+    0;
+
+  min-height:
+    175px;
+
+  padding:
+    18px;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    16px;
+
+  background:
+    var(--green-bright);
+
+  border:
+    1px solid
+    rgba(113,37,43,0.14);
+
+  box-shadow:
+    0 6px 18px
+    rgba(63,45,42,0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.why-flooded-card:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 10px 24px
+    rgba(63,45,42,0.13);
+
+}
+
+
+/* LARGE BACKGROUND NUMBER */
+
+.why-flooded-number {
+
+  position:
+    absolute;
+
+  top:
+    -8px;
+
+  right:
+    10px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    76px;
+
+  line-height:
+    1;
+
+  color:
+    rgba(113,37,43,0.10);
+
+  pointer-events:
+    none;
+
+}
+
+
+/* SMALL PLUM ACCENT */
+
+.why-flooded-card::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    18px;
+
+  top:
+    18px;
+
+  width:
+    28px;
+
+  height:
+    4px;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--plum);
+
+}
+
+
+.why-flooded-card p {
+
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  margin:
+    32px 0 0;
+
+  color:
+    var(--plum);
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  line-height:
+    1.7;
+
+}
+
+
+/* =========================================================
+   CONTEXT NOTE
+========================================================= */
+
+.why-flooded-note {
+
+  margin-top:
+    11px;
+
+  padding:
+    10px 12px;
+
+  border-radius:
+    10px;
+
+  background:
+    rgba(113,37,43,0.07);
+
+  border:
+    1px solid
+    rgba(113,37,43,0.10);
+
+  color:
+    rgba(113,37,43,0.68);
+
+  font-size:
+    10px;
+
+  line-height:
+    1.55;
+
+}
+
+
+.why-flooded-note strong {
+
+  color:
+    var(--plum);
+
+  font-weight:
+    900;
+
+}
+/* =========================================================
+   RISK PROFILE — BOTTOM
+========================================================= */
+
+.risk-profile-section {
+
+  margin-top:
+    12px;
+
+  padding:
+    18px;
+
+  border-radius:
+    20px;
+
+  background:
+    rgba(247,242,232,0.08);
+
+  border:
+    1px solid
+    rgba(202,255,166,0.14);
+}
+
+.risk-profile-heading {
+
+  margin-bottom:
+    15px;
+}
+
+.risk-profile-heading p {
+
+  margin:
+    0 0 5px;
+
+  color:
+    rgba(202,255,166,0.72);
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.16em;
+}
+
+.risk-profile-heading h3 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    29px;
+
+  line-height:
+    1;
+
+  font-weight:
+    400;
+
+  color:
+    var(--green-bright);
+}
+
+.risk-profile-heading span {
+
+  display:
+    block;
+
+  max-width:
+    800px;
+
+  margin-top:
+    6px;
+
+  color:
+    rgba(247,242,232,0.62);
+
+  font-size:
+    12px;
+
+  line-height:
+    1.55;
+}
+
+.risk-factor-columns {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    12px;
+}
+
+.risk-factor-group {
+
+  padding:
+    12px;
+
+  border-radius:
+    14px;
+
+  background:
+    rgba(247,242,232,0.055);
+
+  border:
+    1px solid
+    rgba(202,255,166,0.08);
+}
+
+.risk-group-title {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  margin-bottom:
+    9px;
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+}
+
+.blue-title {
+  color:
+    var(--blue-bright);
+}
+
+.green-title {
+  color:
+    var(--green-bright);
+}
+
+.risk-factor-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    7px;
+}
+
+.risk-factor-card {
+
+  min-height:
+    126px;
+
+  padding:
+    12px;
+
+  border-radius:
+    12px;
+
+  background:
+    var(--mist);
+
+  border-top:
+    3px solid
+    var(--blue-dark);
+}
+
+.risk-factor-card.green {
+
+  border-top-color:
+    var(--green-dark);
+}
+
+.risk-factor-label {
+
+  display:
+    block;
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  color:
+    var(--green-text);
+}
+
+.risk-factor-value {
+
+  display:
+    block;
+
+  margin-top:
+    8px;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    25px;
+
+  line-height:
+    0.98;
+
+  font-weight:
+    600;
+
+  color:
+    var(--blue-dark);
+}
+
+.risk-factor-detail {
+
+  display:
+    block;
+
+  margin-top:
+    6px;
+
+  font-size:
+    10px;
+  font-weight:
+    700;
+
+  line-height:
+    1.45;
+
+  color:
+    var(--plum);
+}
+
+.risk-method-note {
+
+  margin-top:
+    11px;
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    7px;
+
+  font-size:
+    12px;
+}
+
+.risk-method-note span {
+
+  padding:
+    5px 7px;
+
+  border-radius:
+    6px;
+
+  background:
+    rgba(247,242,232,0.08);
+
+  color:
+    rgba(247,242,232,0.57);
+}
+
+.risk-method-note strong {
+
+  color:
+    rgba(202,255,166,0.67);
+
+  font-weight:
+    650;
+}
+
+
+/* =========================================================
+   DISTRICT RETURN
+========================================================= */
+
+.district-next-card {
+
+  margin-top:
+    10px;
+
+  padding:
+    15px 17px;
+
+  border-radius:
+    17px;
+
+  background:
+    rgba(247,242,232,0.09);
+
+  border:
+    1px solid
+    rgba(202,255,166,0.13);
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+}
+
+.district-next-card p {
+
+  margin:
+    0 0 4px;
+
+  color:
+    rgba(202,255,166,0.65);
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.15em;
+}
+
+.district-next-card h3 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    22px;
+
+  line-height:
+    1;
+
+  font-weight:
+    400;
+
+  color:
+    var(--green-bright);
+}
+
+.district-next-card button {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  padding:
+    9px 11px;
+
+  border:
+    0;
+
+  border-radius:
+    9px;
+
+  background:
+    var(--green-bright);
+
+  color:
+    var(--plum);
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+}
+
+
+/* =========================================================
+   MISSING DATA
+========================================================= */
+
+.missing-district {
+
+  min-height:
+    500px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  gap:
+    15px;
+}
+
+.missing-district h2 {
+
+  margin:
+    0;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size:
+    40px;
+
+  font-weight:
+    400;
+
+  color:
+    var(--green-bright);
+}
+
+.district-primary-button {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  padding:
+    10px 13px;
+
+  border:
+    0;
+
+  border-radius:
+    9px;
+
+  background:
+    var(--green-bright);
+
+  color:
+    var(--plum);
+
+  font-size:
+    8px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading-spinner {
+
+  width:
+    30px;
+
+  height:
+    30px;
+
+  border:
+    3px solid
+    rgba(113,37,43,0.13);
+
+  border-top-color:
+    var(--plum);
+
+  border-radius:
+    50%;
+
+  animation:
+    spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+.chart-empty {
+
+  height:
+    100%;
+
+  min-height:
+    240px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  text-align:
+    center;
+
+  color:
+    rgba(113,37,43,0.55);
+}
+
+.chart-empty strong {
+
+  color:
+    var(--plum);
+
+  font-size:
+    12px;
+}
+
+.chart-empty span {
+
+  max-width:
+    350px;
+
+  font-size:
+    8px;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1350px) {
+
+  .site-header {
+
+    grid-template-columns:
+      1fr auto;
+  }
+
+  .header-nav {
+
+    grid-column:
+      1 / -1;
+
+    justify-content:
+      center;
+
+    order:
+      3;
+  }
+
+  .district-metric-grid {
+
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+
+}
+
+
+@media (max-width: 1100px) {
+
+  .overview-map-grid {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .overview-side {
+
+    display:
+      grid;
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .district-main-grid {
+
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .page {
+
+    width:
+      calc(100% - 28px);
+  }
+
+  .overview-hero {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .district-metric-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .district-side-column {
+
+    display:
+      grid;
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .risk-factor-columns {
+
+    grid-template-columns:
+      1fr;
+  }
+
+}
+  .why-flooded-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .why-flooded-card {
+
+    min-height:
+      145px;
+
+  }
+@media (max-width: 980px) {
+
+  .overview-event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-rainfall-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .overview-rainfall-stats {
+    min-width: 0;
+    width: 100%;
+    border-left: 0;
+    border-top: 1px solid rgba(113,37,43,0.13);
+    padding-top: 10px;
+  }
+
+}
+
+@media (max-width: 720px) {
+
+  .site-header {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      9px;
+  }
+
+  .event-pill {
+
+    justify-self:
+      start;
+  }
+
+  .header-nav {
+
+    overflow-x:
+      auto;
+
+    justify-content:
+      flex-start;
+  }
+
+  .overview-side {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .district-side-column {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .district-map-header {
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+  }
+
+  .map-controls-and-legend {
+
+    align-items:
+      flex-start;
+  }
+
+  .spatial-legend {
+
+    flex-wrap:
+      wrap;
+
+    justify-content:
+      flex-start;
+  }
+
+  .district-rainfall-summary {
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+  }
+
+  .mini-detail-grid {
+
+    min-width:
+      0;
+
+    width:
+      100%;
+
+    border-left:
+      0;
+
+    border-top:
+      1px solid
+      rgba(113,37,43,0.13);
+
+    padding-top:
+      10px;
+  }
+    .why-flooded-section {
+
+    padding:
+      15px;
+
+  }
+
+
+  .why-flooded-heading h3 {
+
+    font-size:
+      27px;
+
+  }
+
+
+  .why-flooded-card {
+
+    padding:
+      16px;
+
+  }
+
+
+  .why-flooded-card p {
+
+    font-size:
+      11px;
+
+    line-height:
+      1.65;
+
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .page {
+
+    width:
+      calc(100% - 18px);
+  }
+
+  .hero-copy {
+
+    padding:
+      28px 22px;
+  }
+
+  .hero-copy h2 {
+
+    font-size:
+      38px;
+  }
+
+  .hero-snapshot {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .district-metric-grid {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .district-map-wrapper {
+
+    height:
+      440px;
+  }
+
+  .overview-landcover-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .overview-landcover-chart {
+    height: 250px;
+  }
+
+  .overview-landcover-legend {
+    padding: 0 15px 18px;
+  }
+
+  .profile-pie-layout {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .profile-terrain {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .risk-factor-grid {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .district-next-card {
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+  }
+
+  .district-next-card button {
+
+    width:
+      100%;
+
+    justify-content:
+      center;
+  }
+
+}
+/* =========================================================
+   WHY IT FLOODED — FORCE 3 COLUMN DESKTOP LAYOUT
+========================================================= */
+
+.why-flooded-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+.why-flooded-card {
+  width: auto !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+
+/* TABLET / MOBILE */
+
+@media (max-width: 900px) {
+
+  .why-flooded-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .why-flooded-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+}
+/* =========================================================
+   WHY IT FLOODED — PLUM CARDS
+========================================================= */
+
+.why-flooded-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+
+.why-flooded-card {
+  width: auto !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+
+  background:
+    var(--plum) !important;
+
+  border:
+    1px solid
+    rgba(247,242,232,0.18) !important;
+
+  box-shadow:
+    0 8px 20px
+    rgba(63,45,42,0.12) !important;
+}
+
+
+/* TEXT INSIDE THE PLUM CARDS */
+
+.why-flooded-card p {
+  color:
+    var(--mist) !important;
+}
+
+
+/* 01 / 02 / 03 */
+
+.why-flooded-number {
+  color:
+    rgba(247,242,232,0.13) !important;
+}
+
+
+/* SMALL ACCENT LINE */
+
+.why-flooded-card::before {
+  background:
+    var(--mist) !important;
+}
+
+
+/* CONTEXT NOTE */
+
+.why-flooded-note {
+  background:
+    rgba(113,37,43,0.10);
+
+  border:
+    1px solid
+    rgba(113,37,43,0.14);
+
+  color:
+    rgba(113,37,43,0.68);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .why-flooded-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .why-flooded-grid {
+    grid-template-columns:
+      1fr !important;
+  }
+
+}
+
+
+/* =========================================================
+   FLOOD IMPACT STATUS
+========================================================= */
+
+.district-status-badge {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  padding:
+    10px 14px;
+
+  border-radius:
+    12px;
+
+  min-width:
+    175px;
+
+}
+
+
+/* STATUS DOT */
+
+.district-status-badge > span {
+
+  width:
+    9px;
+
+  height:
+    9px;
+
+  flex:
+    0 0 9px;
+
+  border-radius:
+    50%;
+
+}
+
+
+/* TEXT */
+
+.district-status-badge div {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    2px;
+
+}
+
+
+.district-status-badge small {
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+}
+
+
+.district-status-badge strong {
+
+  font-size:
+    15px;
+
+  font-weight:
+    900;
+
+}
+
+
+/* =========================================================
+   LOW
+========================================================= */
+
+.flood-impact-low {
+
+  background:
+    rgba(66, 246, 6, 0.2);
+
+  border:
+    1px solid
+    rgba(202,255,166,0.35);
+
+  color:
+    var(--green-bright);
+
+}
+
+.flood-impact-low > span {
+
+  background:
+    var(--green-bright);
+
+}
+
+
+/* =========================================================
+   MODERATE
+========================================================= */
+
+.flood-impact-moderate {
+
+  background:
+    rgba(241, 233, 6, 0.2);
+
+  border:
+    1px solid
+    rgba(221,166,75,0.40);
+
+  color:
+    #F1D58D;
+
+}
+
+.flood-impact-moderate > span {
+
+  background:
+    #F1D58D;
+
+}
+
+
+/* =========================================================
+   HIGH
+========================================================= */
+
+.flood-impact-high {
+
+  background:
+    rgba(255, 145, 1, 0.2);
+
+  border:
+    1px solid
+    rgba(231,88,62,0.45);
+
+  color:
+    #FFB09E;
+
+}
+
+.flood-impact-high > span {
+
+  background:
+    #FF8B73;
+
+}
+
+
+/* =========================================================
+   VERY HIGH
+========================================================= */
+
+.flood-impact-very-high {
+
+  background:
+    rgba(213,58,49,0.28);
+
+  border:
+    1px solid
+    rgba(255,120,105,0.55);
+
+  color:
+    #FFD0C9;
+
+}
+
+.flood-impact-very-high > span {
+
+  background:
+    #FF6255;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(255,98,85,0.12);
+
+}

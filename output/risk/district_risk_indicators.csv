@@ -1,0 +1,12 @@
+District,District_Area_km2,Flooded_Area_km2,Flooded_Area_Percent,Flood_Period_Rainfall_mm,Mean_Elevation_m,Mean_Slope_Degrees,River_Gauge,River,Observed_Water_Level_m,Danger_Level_m,Difference_From_Danger_m,River_Condition,Total_Cropland_km2,Flood_Affected_Cropland_km2,Flood_Affected_Cropland_Percent,Total_Forest_km2,Flood_Affected_Forest_km2,Flood_Affected_Forest_Percent,Total_Buildings,Flood_Affected_Buildings,Flood_Affected_Buildings_Percent,Risk_Score,Risk_Category
+Biswanath,,,,,,,No directly listed gauge,,,,,,,,,,,,,,,,
+Charaideo,,,,,,,No directly listed gauge,,,,,,,,,,,,,,,,
+Darrang,,,,,,,No directly listed gauge,,,,,,,,,,,,,,,,
+Golaghat,,,,,,,Golaghat,Dhansiri (South),,89.5,,,,,,,,,,,,,
+Hojai,,,,,,,No directly listed gauge,,,,,,,,,,,,,,,,
+Jorhat,,,,,,,Neamatighat,Brahmaputra,85.63,85.04,0.5899999999999892,Above Danger Level,,,,,,,,,,,
+Karbi Anglong,,,,,,,No directly listed gauge,,,,,,,,,,,,,,,,
+Lakhimpur,,,,,,,Badatighat,Subansiri,,82.53,,,,,,,,,,,,,
+Nagaon,,,,,,,Kampur,Kopili,,60.5,,,,,,,,,,,,,
+Sivasagar,,,,,,,Sivasagar,Dikhow,94.26,92.4,1.8599999999999997,Above Danger Level,,,,,,,,,,,
+Sonitpur,,,,,,,Tezpur,Brahmaputra,,65.23,,,,,,,,,,,,,
